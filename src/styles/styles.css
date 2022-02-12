@@ -1,9 +1,9 @@
 html, body {
   display: flex;
   flex-direction: column;
+  min-width: 900px;
   min-height: 100vh;
   height: auto;
-  min-width: 900px;
   font-family: "M PLUS 1 Code", sans-serif!important;
   background-color: var(--gs-background-color-surface-0);
   color: var(--gs-body-text-color);
