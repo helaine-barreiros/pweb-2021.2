@@ -1,7 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Container } from './styles';
 
-export const Button = () => {
+export const Button = ({ children, width = '40px' }) => {
   return (
-    <Fragment />
+    <Container width={width} href="#">
+      {children}
+    </Container>
   )
 }

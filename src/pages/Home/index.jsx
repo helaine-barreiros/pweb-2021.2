@@ -1,10 +1,13 @@
 import React from "react";
-import { PageLayout } from "../../core/components";
+import { Button, PageLayout, PasswordBox } from "../../core/components";
 
 export const HomePage = () => {
   return (
     <PageLayout>
-      <p>Hello world!</p>
+      <Button>
+        Copiar
+      </Button>
+      <PasswordBox badge="muito forte" />
     </PageLayout>
   )
 }

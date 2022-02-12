@@ -1,7 +1,10 @@
 import React, { Fragment } from 'react';
+import { Span } from './styles';
 
-export const Badge = () => {
+export const Badge = ({ children }) => {
   return (
-    <Fragment />
+    <Span>
+      {children}
+    </Span>
   )
 }

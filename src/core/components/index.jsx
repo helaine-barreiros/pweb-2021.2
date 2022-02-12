@@ -6,4 +6,4 @@ export * from './Generator';
 export * from './Header';
 export * from './PageLayout';
 export * from './Slider';
-export * from './Textbox';
+export * from './PasswordBox';
