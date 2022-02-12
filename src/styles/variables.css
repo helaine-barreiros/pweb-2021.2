@@ -1,8 +1,8 @@
 
 :root {
-  --gs-background-color-surface-0: #000;
-  --gs-background-color-surface-1: #000;
-  --gs-body-text-color: #000;
-  --gs-header-text-color: #000;
-  --gs-footer-text--color: #000;
+  --gs-background-color-surface-0: #152b38;
+  --gs-background-color-surface-1: #0070f6;
+  --gs-body-text-color: #ffffff;
+  --gs-header-text-color: #aacf38;
+  --gs-footer-text--color: #2D4D3B;
 }

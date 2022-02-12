@@ -1,0 +1,16 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  min-width: 900px;
+  font-family: "M PLUS 1 Code",sans-serif;
+  background-color: var(--gs-background-color-surface-0);
+  color: var(--gs-body-text-color);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
