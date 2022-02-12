@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 import Cabecalho from './componentes/cabecalho';
 import Rodape from './componentes/rodape';
