@@ -1,7 +1,12 @@
 import React, { Fragment } from 'react';
+import { Body, Container } from './styles';
 
-export const PageLayout = () => {
+export const PageLayout = ({ children }) => {
   return (
-    <Fragment />
+    <Container>
+      <Body>
+        {children}
+      </Body>
+    </Container>
   )
 }

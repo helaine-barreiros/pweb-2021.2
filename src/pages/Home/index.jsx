@@ -1,7 +1,10 @@
-import React, { Fragment } from "react"
+import React from "react";
+import { PageLayout } from "../../core/components";
 
 export const HomePage = () => {
   return (
-    <p>Hello world!</p>
+    <PageLayout>
+      <p>Hello world!</p>
+    </PageLayout>
   )
 }
