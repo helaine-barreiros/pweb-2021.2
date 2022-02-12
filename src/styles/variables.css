@@ -1,1 +1,8 @@
-/* Something here */
+
+:root {
+  --gs-background-color-surface-0: #000;
+  --gs-background-color-surface-1: #000;
+  --gs-body-text-color: #000;
+  --gs-header-text-color: #000;
+  --gs-footer-text--color: #000;
+}

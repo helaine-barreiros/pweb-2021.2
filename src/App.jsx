@@ -1,19 +1,8 @@
 import React from 'react';
+import { AppRoutes } from './routes';
 
-import Cabecalho from './componentes/cabecalho';
-import Rodape from './componentes/rodape';
-import PainelConfiguracao from './componentes/painel-configuracao';
-
-const App = function () {
+export const App = () => {
   return (
-    <div id="principal">
-      <Cabecalho />
-      <main className="conteudo">
-        <PainelConfiguracao />
-      </main>
-      <Rodape />
-    </div>
-  );
-};
-
-export default App;
+    <AppRoutes />
+  )
+}
