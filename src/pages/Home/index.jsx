@@ -1,7 +1,7 @@
-import { Fragment } from "react"
+import React, { Fragment } from "react"
 
 export const HomePage = () => {
   return (
-    <Fragment />
+    <p>Hello world!</p>
   )
 }
