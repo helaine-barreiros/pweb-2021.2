@@ -18,7 +18,7 @@ export const Input = styled.input`
     cursor: pointer;
   }
 
-  & {
+  &{
     -webkit-appearance: none;
     width: 335px;
     height: 4px;
