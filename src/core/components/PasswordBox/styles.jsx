@@ -13,6 +13,7 @@ export const Container = styled.div`
   transition: border .3s;
   padding-left: 24px;
   padding-right: 24px;
+  width: 100%;
 `;
 
 export const ActionGroup = styled.div`
