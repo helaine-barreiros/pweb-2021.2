@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Logo from '../../images/logo.png'
+import { FiX, FiClipboard} from 'react-icons/fi'
 import './Home.css'
 
 export const HomePage = () => {
 
   const [lengthPassword, setLengthPassword] = useState(6);
-
-
+  const [password, setPassword] = useState('Sua senha aparecerá aqui!');
 
   return (
     <div className="container-home">
@@ -16,7 +16,6 @@ export const HomePage = () => {
         <p>Gere senhas fortes para sua segurança!</p>
 
         <div className="options">
-
           <div className="password-length">
             <div className="option">
               <strong>Tamanho</strong>
@@ -26,7 +25,6 @@ export const HomePage = () => {
               <input type="range" defaultValue='6' min='6' max='36' onChange={e => setLengthPassword(e.target.value)} />
             </div>
           </div>
-
           <div className="row">
             <div className="option">
               <strong>Maiusculas</strong>
@@ -43,7 +41,6 @@ export const HomePage = () => {
               </label>
             </div>
           </div>
-
           <div>
             <div className="option">
               <strong>Números</strong>
@@ -60,6 +57,13 @@ export const HomePage = () => {
               </label>
             </div>
           </div>
+        </div>
+
+        <div className="area-password">
+          <label placeholder="aaaa">{password}</label>
+          <button>
+            <FiClipboard size={20} color='white'/>
+          </button>
         </div>
 
         <button>Gerar Senha</button>

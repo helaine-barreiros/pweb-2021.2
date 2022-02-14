@@ -61,7 +61,7 @@ strong {
 
 .container-home button {
   width: 20%;
-  height: 46px;
+  height: 24px;
   border-radius: 4px;
   border: 0;
   font-size: 16px;
@@ -90,6 +90,34 @@ strong {
   border-radius: 34px;
 }
 
+.area-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 34px;
+  background-color: rgb( 255, 255, 255, 0.15);
+  border-radius: 9px;
+  margin-bottom: 10px;
+}
+
+.area-password button {
+  margin-right: 10px;
+  padding: 0;
+  margin-top: 0;
+  width: 30px;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.area-password label{
+  width: 100%;
+  text-align: center;
+  margin-left: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 /* Input-Ranger-Modificado */
 
 input[type=range] {
@@ -105,7 +133,7 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 25px;
-  height: 25px;
+  height: 24px;
   border-radius: 50%; 
   background: #f3cd21;
   cursor: pointer;
