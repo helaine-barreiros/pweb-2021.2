@@ -1,8 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import Logo from '../../images/logo.png'
 import './Home.css'
 
 export const HomePage = () => {
+
+  const [lengthPassword, setLengthPassword] = useState(6);
+
+
+
   return (
     <div className="container-home">
       <div className="content">
@@ -11,6 +16,16 @@ export const HomePage = () => {
         <p>Gere senhas fortes para sua segurança!</p>
 
         <div className="options">
+
+          <div className="password-length">
+            <div className="option">
+              <strong>Tamanho</strong>
+              <span>{lengthPassword}</span>
+            </div>
+            <div className="option">
+              <input type="range" defaultValue='6' min='6' max='36' onChange={e => setLengthPassword(e.target.value)} />
+            </div>
+          </div>
 
           <div className="row">
             <div className="option">
