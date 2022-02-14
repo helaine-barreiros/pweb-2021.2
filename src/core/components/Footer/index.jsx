@@ -1,20 +1,18 @@
-import React, { Fragment } from 'react';
-import { Container, FooterText, Image, ImageGroup, Link } from './styles';
+import React from 'react';
+import styles from './Footer.module.css';
+import BrasaoUPE from '../../../images/brasaoUPE.png'
+import LogoUPE from '../../../images/logoUPE.png'
 
 export const Footer = () => {
   return (
-    <Container>
-      <FooterText>
-        Disciplina de Programação III ©
-      </FooterText>
-      <ImageGroup>
-        <Link title="Universidade de Pernambuco" href="http://upe.br">
-          <Image src="assets/asset_upe_blazon_logo.png" />
-        </Link>
-        <Link title="Universidade de Pernambuco" href="http://upe.br/garanhuns">
-          <Image src="assets/asset_upe_multicampi_logo.png" />
-        </Link>
-      </ImageGroup>
-    </Container>
+    <div className={styles.containerFooter}>
+      <div className={styles.body}>
+        <strong>	&#169; Disciplina de Prograamação Web III</strong>
+        <div className={styles.logos}>
+          <img src={LogoUPE} alt="logoUPE" height='25px' />
+          <img src={BrasaoUPE} alt="logoUPE" height='25px' />
+        </div>
+      </div>
+    </div>
   )
 }

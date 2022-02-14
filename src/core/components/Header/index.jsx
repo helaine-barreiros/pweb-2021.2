@@ -1,15 +1,19 @@
 import React from 'react';
-import { Container, MenuButton, Title } from './styles';
+import styles from './Header.module.css';
+import Logo from '../../../images/logo.png'
 
-export const Header = ({ onMenuClick }) => {
+export const Header = () => {
   return (
-    <Container>
-      <Title>Gerador de Senhas</Title>
-      <MenuButton 
-        src="assets/asset_header_button_icon.png" 
-        alt="Botão do Menu"
-        onClick={onMenuClick}
-      />
-    </Container>
+    <div className={styles.containerHeader}>
+    <div className={styles.body}>
+      <div>
+        <img src={Logo} alt="logo" width='15px' />
+        <strong>Gerador de Senhas</strong>
+      </div>
+      <div>
+        <strong>...</strong>
+      </div>
+    </div>
+    </div>
   )
 }
