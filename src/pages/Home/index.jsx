@@ -60,7 +60,7 @@ export const HomePage = () => {
         </div>
 
         <div className="area-password">
-          <label placeholder="aaaa">{password}</label>
+          <label>{password}</label>
           <button>
             <FiClipboard size={20} color='white'/>
           </button>

@@ -4,7 +4,7 @@
 }
 
 .content {
-  min-height: calc(100vh - 95px);
+  min-height: calc(100vh - 97px);
   display: flex;
   width: 100%;
   justify-content: center;

@@ -15,9 +15,24 @@
 
 .body strong {
   color: white;
+  font-size: 20px;
 }
 
 .body img {
   margin-right: 10px;
 }
 
+.containerHeader ul {
+  
+}
+
+.containerHeader li {
+  list-style-type: none;
+}
+
+.containerHeader a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1px 3px;
+}
