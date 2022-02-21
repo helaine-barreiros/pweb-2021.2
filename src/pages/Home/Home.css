@@ -100,14 +100,21 @@
   background-color: rgba(0, 0, 0, 0.5)
 }
 
-.container-home .area-password label{
+.container-home .area-password input{
   width: 100%;
+  background-color: transparent;
   text-align: center;
   margin-left: 10px;
   color: white;
   font-size: 18px;
   font-weight: bold;
+  border: none;
 }
+
+.container-home .area-password input:focus{
+  outline: none;
+}
+
 
 /* Input-Ranger-Modificado */
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Logo from '../../images/logo.png'
-import { FiX, FiClipboard} from 'react-icons/fi'
+import {FiClipboard} from 'react-icons/fi'
 import './Home.css'
 
 export const HomePage = () => {
@@ -10,7 +10,7 @@ export const HomePage = () => {
   const [lowercase, setLowercase] = useState(false);
   const [numbers, setNumbers] = useState(false);
   const [symbols, setSymbols] = useState(false);
-  const [password, setPassword] = useState('Sua senha aparecerá aqui!');
+  const [password, setPassword] = useState('');
 
   var generator = require('generate-password');
 
@@ -31,6 +31,19 @@ export const HomePage = () => {
       uppercase: uppercase,
     });
     return setPassword(password);
+  }
+
+  const copyText = () => {
+    let textoCopiado = document.getElementById("passwordText");
+
+    if(password === ''){
+      alert("Nenhuma senha gerada!");
+    }else {
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Senha '" + textoCopiado.value + "' Copiada!");
+    }
   }
 
   return (
@@ -85,8 +98,8 @@ export const HomePage = () => {
         </div>
 
         <div className="area-password">
-          <label>{password}</label>
-          <button>
+          <input id="passwordText" placeholder='Sua senha aparecerá aqui!' value={password}></input>
+          <button onClick={copyText}>
             <FiClipboard size={20} color='white'/>
           </button>
         </div>
