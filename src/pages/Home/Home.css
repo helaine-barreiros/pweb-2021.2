@@ -84,7 +84,7 @@
 .container-home .area-password {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 450px;
   height: 34px;
   background-color: rgb( 255, 255, 255, 0.15);
@@ -100,7 +100,46 @@
   background-color: rgba(0, 0, 0, 0.5)
 }
 
-.container-home .area-password input{
+.container-home .area-save-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 34px;
+  border-radius: 9px;
+  margin-bottom: 10px;
+}
+
+.container-home .area-save-password input {
+  border: none;
+  background-color: rgb( 255, 255, 255, 0.15);
+  border-radius: 9px;
+  height: 34px;
+  padding-left: 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.container-home .area-save-password input:focus {
+  border: none;
+  outline: 0;
+}
+
+.container-home .area-save-password button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 34px;
+  height: 34px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+}
+
+.container-home .area-password .myPassword{
   width: 100%;
   background-color: transparent;
   text-align: center;
@@ -110,11 +149,6 @@
   font-weight: bold;
   border: none;
 }
-
-.container-home .area-password input:focus{
-  outline: none;
-}
-
 
 /* Input-Ranger-Modificado */
 

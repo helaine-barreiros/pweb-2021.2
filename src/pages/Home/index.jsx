@@ -1,16 +1,18 @@
 import { useState } from "react";
 import Logo from '../../images/logo.png'
-import {FiClipboard} from 'react-icons/fi'
+import {FiClipboard, FaRegSave} from 'react-icons/all'
 import './Home.css'
 
 export const HomePage = () => {
 
   const [lengthPassword, setLengthPassword] = useState(6);
+  const [password, setPassword] = useState('');
+  const [havePassword, setHavePassword] = useState(false);
+
   const [uppercase, setUppercase] = useState(false);
   const [lowercase, setLowercase] = useState(false);
   const [numbers, setNumbers] = useState(false);
   const [symbols, setSymbols] = useState(false);
-  const [password, setPassword] = useState('');
 
   var generator = require('generate-password');
 
@@ -30,20 +32,8 @@ export const HomePage = () => {
       lowercase: lowercase,
       uppercase: uppercase,
     });
+    setHavePassword(true);
     return setPassword(password);
-  }
-
-  const copyText = () => {
-    let textoCopiado = document.getElementById("passwordText");
-
-    if(password === ''){
-      alert("Nenhuma senha gerada!");
-    }else {
-      textoCopiado.select();
-      textoCopiado.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Senha '" + textoCopiado.value + "' Copiada!");
-    }
   }
 
   return (
@@ -52,7 +42,6 @@ export const HomePage = () => {
         <img src={Logo} alt="logo" />
         <h1>Gerador de Senhas</h1>
         <p>Gere senhas fortes para sua segurança!</p>
-
         <div className="options">
           <div className="password-length">
             <div className="option">
@@ -60,7 +49,7 @@ export const HomePage = () => {
               <span>{lengthPassword}</span>
             </div>
             <div className="option">
-              <input type="range" defaultValue='6' min='6' max='36' onChange={e => setLengthPassword(e.target.value)} />
+              <input type="range" defaultValue='6' min='6' max='24' onChange={e => setLengthPassword(e.target.value)} />
             </div>
           </div>
           <div className="row">
@@ -97,12 +86,25 @@ export const HomePage = () => {
           </div>
         </div>
 
-        <div className="area-password">
-          <input id="passwordText" placeholder='Sua senha aparecerá aqui!' value={password}></input>
-          <button onClick={copyText}>
-            <FiClipboard size={20} color='white'/>
-          </button>
-        </div>
+        {
+          !havePassword ?
+            <div className="area-password">
+              <span className="myPassword" id="passwordText" >Sua senha aparecerá aqui!</span>
+            </div>
+            :
+            <>
+              <div className="area-password">
+                <span className="myPassword" id="passwordText" >{password}</span>
+                <button><FiClipboard size={20} color='white' /></button>
+              </div>
+            <div className="area-save-password">
+              
+                <input type="text" placeholder="Salvar senha!" />
+                <button><FaRegSave size={20} color='white' /></button>
+              
+            </div>
+            </>
+        }
 
         {isChecked() ?
           <button onClick={() => generatePassword(lengthPassword, numbers, symbols, lowercase, uppercase)}>Gerar Senha</button>
