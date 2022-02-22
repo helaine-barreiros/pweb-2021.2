@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Logo from '../../images/logo.png'
-import {FiClipboard, FaRegSave} from 'react-icons/all'
+import { FiClipboard, FaRegSave } from 'react-icons/all'
 import './Home.css'
+import copy from "copy-to-clipboard";
 
 export const HomePage = () => {
 
@@ -40,8 +41,9 @@ export const HomePage = () => {
     alert('Senha salva!')
   }
 
-  const copyPassword = () => {
-    alert('Senha copiada!')
+  const copyToClipboard = () => {
+    copy(password);
+    alert(`Senha copiada "${password}"`);
   }
 
   return (
@@ -103,12 +105,12 @@ export const HomePage = () => {
             <>
               <div className="area-password">
                 <span className="myPassword" id="passwordText" >{password}</span>
-                <button onClick={copyPassword}><FiClipboard size={20} color='white' /></button>
+                <button onClick={copyToClipboard}><FiClipboard size={20} color='white' /></button>
               </div>
-            <div className="area-save-password">
+              <div className="area-save-password">
                 <input type="text" placeholder="Salvar senha!" />
                 <button onClick={savePassword}><FaRegSave size={20} color='white' /></button>
-            </div>
+              </div>
             </>
         }
 
