@@ -36,6 +36,14 @@ export const HomePage = () => {
     return setPassword(password);
   }
 
+  const savePassword = () => {
+    alert('Senha salva!')
+  }
+
+  const copyPassword = () => {
+    alert('Senha copiada!')
+  }
+
   return (
     <div className="container-home">
       <div className="content">
@@ -95,13 +103,11 @@ export const HomePage = () => {
             <>
               <div className="area-password">
                 <span className="myPassword" id="passwordText" >{password}</span>
-                <button><FiClipboard size={20} color='white' /></button>
+                <button onClick={copyPassword}><FiClipboard size={20} color='white' /></button>
               </div>
             <div className="area-save-password">
-              
                 <input type="text" placeholder="Salvar senha!" />
-                <button><FaRegSave size={20} color='white' /></button>
-              
+                <button onClick={savePassword}><FaRegSave size={20} color='white' /></button>
             </div>
             </>
         }

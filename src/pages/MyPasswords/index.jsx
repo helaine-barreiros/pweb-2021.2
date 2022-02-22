@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiClipboard, TiArrowBack } from 'react-icons/all'
+import { FiClipboard, TiArrowBack, AiFillDelete } from 'react-icons/all'
 import { Link } from 'react-router-dom';
 import './MyPasswords.css'
 
@@ -42,7 +42,10 @@ export const Mypasswords = () => {
                 <label>{password.label}</label>
                 <span>{password.password}</span>
               </div>
-              <button onClick={copyLink}><FiClipboard /></button>
+              <div className='buttons'>
+                <button onClick={copyLink}><FiClipboard /></button>
+                <button><AiFillDelete /></button>
+              </div>
             </div>
           ))
         }
