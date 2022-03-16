@@ -14,7 +14,7 @@ const App = function () {
           <h1 className="titulo">Gerador de Senhas</h1>
         </div>
         <div className="container-menu">
-          <button>
+          <button type="button">
             <img className="icone-menu" src={menu} alt="imagem-menu" />
           </button>
         </div>
@@ -27,42 +27,69 @@ const App = function () {
           <div className="componentes">
             <div className="input">
               <div className="senha">gOPsIMXnlPPlCsl</div>
-              <span className="classificacao classificacao-lg muito-forte">muito forte</span>
+              <span className="classificacao classificacao-lg muito-forte">
+                muito forte
+              </span>
               <div className="botao-gerar-container">
-                <a href="#" className="lnk-gerar"><Gerar className="img-gerar" /></a>
+                <a href="#top" className="lnk-gerar">
+                  <Gerar className="img-gerar" />
+                </a>
               </div>
             </div>
             <div className="copiar">
-              <a href="#" className="lnk-copiar">Copiar</a>
+              <a href="#top" className="lnk-copiar">
+                Copiar
+              </a>
             </div>
             <div className="ajustes">
               <div className="tamanho">
-                <label htmlFor="tamanh-definido" className="tamanho-label">Tamanho da senha: </label>
+                <label htmlFor="tamanh-definido" className="tamanho-label">
+                  Tamanho da senha:
+                  <input type="range" min="4" max="64" />
+                </label>
                 <span className="tamanho-definido">15</span>
-                <button className="btn-senha">-</button>
-                <input type="range" min="4" max="64" />
-                <button className="btn-senha">+</button>
               </div>
               <div className="complexidade">
-                <label className="texto-caracteres">Caracteres utilizados: </label>
+                <span className="texto-caracteres">Caracteres utilizados:</span>
                 <div className="check-caracteres">
                   <div className="check-opcao">
-                    <input type="checkbox" id="maiuscula" className="item-opcao" />
-                    <label htmlFor="maiuscula" className="item-opcao-label">ABC</label>
+                    <label htmlFor="maiuscula" className="item-opcao-label">
+                      ABC
+                      <input
+                        type="checkbox"
+                        id="maiuscula"
+                        className="item-opcao"
+                      />
+                    </label>
                   </div>
                   <div className="check-opcao">
-                    <input type="checkbox" id="minuscula" className="item-opcao" />
-                    <label htmlFor="minuscula" className="item-opcao-label">abc</label>
+                    <label htmlFor="minuscula" className="item-opcao-label">
+                      abc
+                      <input
+                        type="checkbox"
+                        id="minuscula"
+                        className="item-opcao"
+                      />
+                    </label>
                   </div>
                   <div className="check-opcao">
-                    <input type="checkbox" id="numeros" className="item-opcao" />
-                    <label htmlFor="numeros" className="item-opcao-label">123</label>
+                    <label htmlFor="numeros" className="item-opcao-label">
+                      123
+                      <input
+                        type="checkbox"
+                        id="numeros"
+                        className="item-opcao"
+                      />
+                    </label>
                   </div>
                   <div className="check-opcao">
-                    <input type="checkbox" id="especiais" className="item-opcao" />
                     <label htmlFor="especiais" className="item-opcao-label">
-                      #
-                      {body}
+                      !@#$%*()_+
+                      <input
+                        type="checkbox"
+                        id="especiais"
+                        className="item-opcao"
+                      />
                     </label>
                   </div>
                 </div>
@@ -78,10 +105,18 @@ const App = function () {
           </div>
           <div className="logo-container">
             <a title="Universidade de Pernambuco" href="http://www.upe.br">
-              <img className="upe-logo" alt="Universidade de Pernambuco" src={Brasao} />
+              <img
+                className="upe-logo"
+                alt="Universidade de Pernambuco"
+                src={Brasao}
+              />
             </a>
             <a title="Multicampi Garanhuns" href="http://www.upe.br/garanhuns">
-              <img className="multicampi-logo" alt="Multicampi Garanhuns" src={Multicampi} />
+              <img
+                className="multicampi-logo"
+                alt="Multicampi Garanhuns"
+                src={Multicampi}
+              />
             </a>
           </div>
         </div>

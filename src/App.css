@@ -3,32 +3,33 @@
   justify-content: center;
   grid-template-columns: auto;
   grid-template-rows: auto auto 50px;
-  grid-template-areas: "cabecalho"
-                       "conteudo"
-                       "rodape";
+  grid-template-areas:
+    'cabecalho'
+    'conteudo'
+    'rodape';
 }
 
 .cabecalho {
-  grid-area: "menu";
+  grid-area: 'menu';
   display: flex;
   width: 100%;
 }
 
 .container-titulo {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   width: 50%;
 }
 
 .container-menu {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width: 50%;
 }
 
-div > h1{
+div > h1 {
   display: block;
-  align-items: flex-end;  
+  align-items: flex-end;
   color: #aacf38;
   font-size: 1.8rem;
 }
@@ -36,16 +37,16 @@ div > h1{
 div > button {
   background: none;
   border: none;
-  padding: 0;      
+  padding: 0;
   cursor: pointer;
 }
 .icone-menu {
- width: 40px;
- height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 main.conteudo {
-  grid-area: "conteudo";
+  grid-area: 'conteudo';
   display: flex;
   align-items: center;
   padding: 7rem 0;
@@ -83,15 +84,15 @@ div.gerador-container .input {
   background-color: #fff;
   box-sizing: content-box;
   margin-right: 16px;
-  transition: border .3s;
-  width: 540px;
+  transition: border 0.3s;
+  width: 700px;
 }
 
-div.gerador-container .input .senha{
+div.gerador-container .input .senha {
   width: 100%;
   text-align: left;
-  font-size: 16px;
-  letter-spacing: .1px;
+  font-size: 1.9em;
+  letter-spacing: 0.1px;
   color: #261c6a;
   padding: 10px 0 10px 24px;
   margin: 0;
@@ -168,10 +169,12 @@ div.gerador-container .botao-gerar-container {
   text-decoration: none;
   background-color: #0070f6;
   border-width: 0;
-  border: 2px   solid transparent;
+  border: 2px solid transparent;
   border-radius: 28px;
-  box-shadow: 0 8px 32px -8px rgb(0 112 246 / 40%), 0 16px 32px -16px rgb(7 29 43 / 16%);
-  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  box-shadow: 0 8px 32px -8px rgb(0 112 246 / 40%),
+    0 16px 32px -16px rgb(7 29 43 / 16%);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .ajustes {
@@ -195,10 +198,11 @@ div.gerador-container .botao-gerar-container {
   margin-left: 0;
   margin-right: 20px;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.5rem;
   margin-top: 0;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .tamanho-definido {
@@ -207,13 +211,13 @@ div.gerador-container .botao-gerar-container {
   color: #fff;
   font-weight: 600;
   margin-bottom: 0;
-  font-size: .875rem;
+  font-size: 1.3rem;
   line-height: 1.313rem;
   margin-top: 0;
 }
 
 .btn-senha {
-  margin-right: 16  px ;
+  margin-right: 16 px;
   border: 1px solid #7d77a6;
   background-color: transparent;
   outline: none;
@@ -228,19 +232,19 @@ div.gerador-container .botao-gerar-container {
   align-items: center;
   padding: 0;
   border-radius: 50%;
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
   font-size: 1.5rem;
 }
 
-input[type=range] {
+input[type='range'] {
   -webkit-appearance: none;
-  width: 200px;
+  width: 500px;
   height: 4px;
   border-radius: 2px;
   cursor: pointer;
 }
 
-input[type="range" i] {
+input[type='range' i] {
   appearance: auto;
   cursor: default;
   color: rgb(157, 150, 142);
@@ -250,7 +254,7 @@ input[type="range" i] {
   cursor: pointer;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
   height: 16px;
@@ -270,8 +274,8 @@ input[type=range]::-webkit-slider-thumb {
   display: inline-block;
   margin-left: 0;
   margin-bottom: 0;
-  margin-right: 57px;
-  font-size: 1rem;
+  margin-right: 45px;
+  font-size: 1.4rem;
   line-height: 1.5rem;
   white-space: nowrap;
 }
@@ -288,12 +292,13 @@ input[type=range]::-webkit-slider-thumb {
   padding-left: 2rem;
 }
 
-input[type="radio"], input[type="checkbox"] {
+input[type='radio'],
+input[type='checkbox'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type="checkbox" i] {
+input[type='checkbox' i] {
   background-color: initial;
   cursor: default;
   appearance: auto;
@@ -304,7 +309,7 @@ input[type="checkbox" i] {
 }
 
 .item-opcao {
-  width: 1.5rem ;
+  width: 1.5rem;
   height: 1.5rem;
   position: absolute;
   left: 0;
@@ -313,19 +318,20 @@ input[type="checkbox" i] {
 
 .item-opcao-label {
   font-weight: 600;
+  font-size: 1.1em;
   text-align: left;
   width: 50px;
   line-height: 1.5;
-  margin-right: 24px;
+  margin-right: 20px;
   margin-bottom: 0;
   display: block;
-  position: relative;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .rodape {
   align-self: end;
-  grid-area: "rodape";  
+  grid-area: 'rodape';
   top: 0;
   left: 0;
   width: 100%;
@@ -344,16 +350,16 @@ input[type="checkbox" i] {
   width: 100%;
 }
 .titulo-rodape-container {
-  display: flex;
+  display: flex-start;
   width: 50%;
-  justify-content: start;
+  justify-content: flex-start;
   font-weight: bold;
 }
 
 .logo-container {
   display: flex;
   width: 50%;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .upe-logo {
@@ -364,5 +370,5 @@ input[type="checkbox" i] {
 .multicampi-logo {
   width: 30px;
   height: 30px;
-  padding-left: 4px;;
+  padding-left: 4px;
 }
